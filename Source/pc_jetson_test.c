@@ -5,9 +5,9 @@
 #include <time.h>
 
 //Update your paths!
-#define FILE_TEST_IMAGE		"X:\\Development\\LeNet5_C\\Library\\LeNet5\\LeNet-5\\t10k-images-idx3-ubyte"
-#define FILE_TEST_LABEL		"X:\\Development\\LeNet5_C\\Library\\LeNet5\\LeNet-5\\t10k-labels-idx1-ubyte"
-#define LENET_FILE 		"X:\\Development\\LeNet5_C\\Output\\model.dat"
+#define FILE_TEST_IMAGE		"X:\\Development\\LeNet5_c_cuda\\Library\\LeNet5\\LeNet-5\\t10k-images-idx3-ubyte"
+#define FILE_TEST_LABEL		"X:\\Development\\LeNet5_c_cuda\\Library\\LeNet5\\LeNet-5\\t10k-labels-idx1-ubyte"
+#define LENET_FILE 		"X:\\Development\\LeNet5_c_cuda\\Output\\model.dat"
 #define COUNT_TEST       10000
 
 int read_data(image data[], uint8 label[], const int count, const char* data_file, const char* label_file) {

@@ -6,7 +6,7 @@
             "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
             "args": [
                 "-fdiagnostics-color=always",
-                "-I", "${workspaceFolder}\\Library\\LeNet5\\LeNet-5",
+                "-I", "${workspaceFolder}\\Library\\LeNet5\\LeNet-5\\",
                 "-g",
                 "${file}",
                 "${workspaceFolder}\\Library\\LeNet5\\LeNet-5\\lenet.c",

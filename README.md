@@ -1,5 +1,5 @@
-# LeNet5_C
-Codebase for working with [LeNet5 in C](https://github.com/fan-wenjie/LeNet-5) by [fan-wenjie](https://github.com/fan-wenjie). There's a file for training the model on a PC (C), testing the model on a PC (C), testing the model on a Jetson (C), and testing the model on a Jetson using cuda. Many of these steps/code have files located where I like to place them in my PC, if you place files in different places the steps/code may not work, so don't forget to update paths as needed.
+# LeNet5_c_cuda
+Codebase for working with [LeNet5](https://github.com/fan-wenjie/LeNet-5) by [fan-wenjie](https://github.com/fan-wenjie). There's a file for training the model on a PC (C), testing the model on a PC (C), testing the model on a Jetson (C), and testing the model on a Jetson using cuda. Many of these steps/code have files located where I like to place them in my PC, if you place files in different places the steps/code may not work, so don't forget to update paths as needed.
 
 ## Table of Contents
 - [x] [Install VS Code](#install-vs-code)
@@ -30,9 +30,9 @@ Codebase for working with [LeNet5 in C](https://github.com/fan-wenjie/LeNet-5) b
 - You can install these extensions within VS Code by searching for 'C++' in the Extensions view `(Ctrl+Shift+X)`.
 
 ## Open this repo in VS Code as a workspace
-- This repo should land in a folder called `LeNet5_C`
+- This repo should land in a folder called `LeNet5_c_cuda`
 - Open VS Code then click File -> Open workspace from file...
-- Select the workspace file `LeNet5_C.code-workspace`
+- Select the workspace file `LeNet5_c_cuda.code-workspace`
 - You may have to add folder to workspace which should be the parent directory of the code-workspace file, the workspace structure should look like this:
 
 LeNet5 \
@@ -40,7 +40,7 @@ LeNet5 \
 ├── Library \
 ├── Output \
 ├── Source \
-├── LeNet5_C.code-workspace \
+├── LeNet5_c_cuda.code-workspace \
 ├── README.md
 
 
@@ -94,6 +94,7 @@ LeNet5 \
 - If you're using this repo as the workspace (recommended) then this has already been done!
 
 ## Running Code on PC
+CAUTION In VS Code, sometimes you'll open a C file and the run button is gone. No clue why this happens, but you can fix it by clicking the "split editor right" button (it's next to where the run button should be). No clue why that's a thing.
 
 ### Training the Model
 - Open pc_training.c in VS Code
@@ -123,8 +124,8 @@ single-thread  \
 
 - Just **copy** the files that you need from this repo to your single-thread folder.
 - You can find...
-    - `pc_jetson_test.c` in LeNet5_c/Source
-    - `lenet.c`, `lenet.h`, `t10k-images-idx3-ubyte` and `t10k-labels-idx1-ubyte` in LeNet5_C/Library/LeNet5/LeNet-5
+    - `pc_jetson_test.c` in LeNet5_c_cuda/Source
+    - `lenet.c`, `lenet.h`, `t10k-images-idx3-ubyte` and `t10k-labels-idx1-ubyte` in LeNet5_c_cuda/Library/LeNet5/LeNet-5
     - `model.dat` in LenNet5_C/Output
 - Open a terminal.
 - Use `ls`/`cd` to navigate to your `single-thread` directory.
@@ -148,9 +149,9 @@ multi-thread  \
 
 - Just **copy** the files that you need from this repo to your single-thread folder.
 - You can find...
-    - `jetson_test.cu` in LeNet5_c/Source
+    - `jetson_test.cu` in LeNet5_c_cuda/Source
     - `model.dat` in LenNet5_C/Output
-    - `t10k-images-idx3-ubyte` and `t10k-labels-idx1-ubyte` in LeNet5_C/Library/LeNet5/LeNet-5
+    - `t10k-images-idx3-ubyte` and `t10k-labels-idx1-ubyte` in LeNet5_c_cuda/Library/LeNet5/LeNet-5
 - Open a terminal.
 - Use `ls`/`cd` to navigate to your `multi-thread` directory.
     - i.e. `> cd path/to/where/you/placed/multi-thread`

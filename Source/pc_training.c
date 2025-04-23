@@ -4,11 +4,11 @@
 #include <time.h>
 
 //Update your paths!
-#define FILE_TRAIN_IMAGE		"X:\\Development\\LeNet5_C\\Library\\LeNet5\\LeNet-5\\train-images-idx3-ubyte"
-#define FILE_TRAIN_LABEL		"X:\\Development\\LeNet5_C\\Library\\LeNet5\\LeNet-5\\train-labels-idx1-ubyte"
-#define FILE_TEST_IMAGE		"X:\\Development\\LeNet5_C\\Library\\LeNet5\\LeNet-5\\t10k-images-idx3-ubyte"
-#define FILE_TEST_LABEL		"X:\\Development\\LeNet5_C\\Library\\LeNet5\\LeNet-5\\t10k-labels-idx1-ubyte"
-#define LENET_FILE 		"X:\\Development\\LeNet5_C\\Output\\model.dat"
+#define FILE_TRAIN_IMAGE		"X:\\Development\\LeNet5_c_cuda\\Library\\LeNet5\\LeNet-5\\train-images-idx3-ubyte"
+#define FILE_TRAIN_LABEL		"X:\\Development\\LeNet5_c_cuda\\Library\\LeNet5\\LeNet-5\\train-labels-idx1-ubyte"
+#define FILE_TEST_IMAGE		"X:\\Development\\LeNet5_c_cuda\\Library\\LeNet5\\LeNet-5\\t10k-images-idx3-ubyte"
+#define FILE_TEST_LABEL		"X:\\Development\\LeNet5_c_cuda\\Library\\LeNet5\\LeNet-5\\t10k-labels-idx1-ubyte"
+#define LENET_FILE 		"X:\\Development\\LeNet5_c_cuda\\Output\\model.dat"
 #define COUNT_TRAIN		60000
 #define COUNT_TEST		10000
 
