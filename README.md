@@ -1,5 +1,7 @@
 # LeNet5_c_cuda
-Codebase for working with [LeNet5](https://github.com/fan-wenjie/LeNet-5) by [fan-wenjie](https://github.com/fan-wenjie). There's a file for training the model on a PC (C), testing the model on a PC (C), testing the model on a Jetson (C), and testing the model on a Jetson using cuda. Many of these steps/code have files located where I like to place them in my PC, if you place files in different places the steps/code may not work, so don't forget to update paths as needed.
+Codebase for working with [LeNet5](https://github.com/fan-wenjie/LeNet-5) by [fan-wenjie](https://github.com/fan-wenjie). There's a file for training the model on a PC (C), testing the model on a PC (C), testing the model on a Jetson (C), and testing the model on a Jetson using cuda. The objective of this experiment is to show benefits of parallelism. 
+
+Many of these steps/code have files located where I like to place them in my PC, if you place files in different places the steps/code may not work, so don't forget to update paths as needed.
 
 ## Table of Contents
 - [x] [Install VS Code](#install-vs-code)
@@ -20,6 +22,7 @@ Codebase for working with [LeNet5](https://github.com/fan-wenjie/LeNet-5) by [fa
     - [x] [Single-Thread Test](#single-thread-test)
     - [x] [Multi-Thread Test (cuda)](#multi-thread-test-cuda)
 - [x] [Tool Versions (Windows)](#tool-versions-windows)
+- [x] [Results](#results)
 
 ## Install [Visual Studio Code](https://code.visualstudio.com/download)
 
@@ -163,6 +166,15 @@ multi-thread  \
     - Mine took 0.21 seconds.
     - Yes, zero point!
 
+### Results
+
+| Model | Accuracy | Time |
+|:-------------:|:-------------:|:-------------:|
+| PC Training | 9718/10000 | 5m 47s |
+| PC Test | ... | 17.61s |
+| Jetson Single-thread | ... | 2m 26s |
+| Jetson Multi-thread | ... | 0.1s |
+
 ### Easily Formatting this Readme file (when viewing in VS Code)
 
 You can see a preview of how this readme will look when pushed to GitHub by opening the Readme.md file in VS Code then pressing the shortcut `ctrl + shift + v`.
@@ -171,7 +183,7 @@ For a markdown formatting cheatsheet visit this page for [standard syntax](https
 
 ### Tool Versions (Windows)
 
-| Tool | Version| Date |
+| Tool | Accuracy | Date |
 |:-------------:|:-------------:|:-------------:|
 | MSYS2 | msys2-x86_64-20250221 |
 | gcc | 14.2.0 | |
