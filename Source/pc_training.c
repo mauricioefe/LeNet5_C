@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <time.h>
 
+//Update your paths!
 #define FILE_TRAIN_IMAGE		"X:\\Development\\LeNet5_C\\Library\\LeNet5\\LeNet-5\\train-images-idx3-ubyte"
 #define FILE_TRAIN_LABEL		"X:\\Development\\LeNet5_C\\Library\\LeNet5\\LeNet-5\\train-labels-idx1-ubyte"
 #define FILE_TEST_IMAGE		"X:\\Development\\LeNet5_C\\Library\\LeNet5\\LeNet-5\\t10k-images-idx3-ubyte"
@@ -10,7 +11,6 @@
 #define LENET_FILE 		"X:\\Development\\LeNet5_C\\Output\\model.dat"
 #define COUNT_TRAIN		60000
 #define COUNT_TEST		10000
-
 
 int read_data(unsigned char(*data)[28][28], unsigned char label[], const int count, const char data_file[], const char label_file[])
 {
@@ -67,8 +67,6 @@ int load(LeNet5 *lenet, char filename[])
 	fclose(fp);
 	return 0;
 }
-
-
 
 void foo()
 {
