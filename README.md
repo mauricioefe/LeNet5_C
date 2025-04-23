@@ -1,5 +1,5 @@
 # LeNet5_C
-Codebase for working with [LeNet5 in C](https://github.com/fan-wenjie/LeNet-5) by [fan-wenjie](https://github.com/fan-wenjie).
+Codebase for working with [LeNet5 in C](https://github.com/fan-wenjie/LeNet-5) by [fan-wenjie](https://github.com/fan-wenjie). There's a file for training the model on a PC (C), testing the model on a PC (C), testing the model on a Jetson (C), and testing the model on a Jetson using cuda. Many of these steps/code have files located where I like to place them in my PC, if you place files in different places the steps/code may not work, so don't forget to update paths as needed.
 
 ## Table of Contents
 - [x] [Install VS Code](#install-vs-code)
@@ -98,10 +98,12 @@ LeNet5 \
 ### Training the Model
 - Open pc_training.c in VS Code
 - Hit play, let it do its thing, maybe update your paths
+    - This will output a `model.dat` which contains your trained weights and biases!
 
 ### Test the Model
 - Open pc_jetson_test.c
 - Hit play, ...
+    - This loads the `model.dat` and the dataset and tests the dataset with the trained model.
 
 ## Running Code on the Jetson
 
@@ -130,6 +132,7 @@ single-thread  \
 - Run `gcc -o lenet5singlethread pc_jetson_test.c lenet.c -lm` to generate the .exe file.
     - You will see `lenet5singlethread` appear in the folder.
 - Run `./lenet5singlethread` and wait...
+    - This loads the `model.dat` and the dataset and tests the dataset with the trained model.
     - After a while, you should see the accuracy and elapsed time appear in the terminal.
     - Mine took 146 seconds.
 
@@ -145,7 +148,7 @@ multi-thread  \
 
 - Just **copy** the files that you need from this repo to your single-thread folder.
 - You can find...
-    - `pc_jetson_test.c` in LeNet5_c/Source
+    - `jetson_test.cu` in LeNet5_c/Source
     - `model.dat` in LenNet5_C/Output
     - `t10k-images-idx3-ubyte` and `t10k-labels-idx1-ubyte` in LeNet5_C/Library/LeNet5/LeNet-5
 - Open a terminal.
@@ -154,6 +157,7 @@ multi-thread  \
 - Run `nvcc -o lenet5multithread jetson_test.cu` to generate the .exe file.
     - You will see `lenet5multithread` appear in the folder.
 - Run `./lenet5multithread` and wait...
+    - This loads the `model.dat` and the dataset and tests the dataset with the trained model.
     - After a while, you should see the accuracy and elapsed time appear in the terminal.
     - Mine took 0.21 seconds.
     - Yes, zero point!
