@@ -183,9 +183,9 @@ For a markdown formatting cheatsheet visit this page for [standard syntax](https
 
 ### Tool Versions (Windows)
 
-| Tool | Accuracy | Date |
-|:-------------:|:-------------:|:-------------:|
+| Tool | Version | Date |
+|:-------------:|:-------------:|
 | MSYS2 | msys2-x86_64-20250221 |
-| gcc | 14.2.0 | |
-| gdb | 16.2 | |
-| g++ | 14.2.0 | |
+| gcc | 14.2.0 |
+| gdb | 16.2 |
+| g++ | 14.2.0 |
